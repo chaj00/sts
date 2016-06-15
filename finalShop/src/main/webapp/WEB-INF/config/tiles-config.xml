@@ -4,10 +4,10 @@
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
 	<definition name="mainTemplate"
-			template="/WEB-INF/layout/layout01.jsp">
+			template="/WEB-INF/layout/layout.jsp">
 				<put-attribute name="header" value="/WEB-INF/layout/top.jsp"/>
-				<put-attribute name="left" value="/WEB-INF/layout/left.jsp"/>
-				<put-attribute name="content" value="/WEB-INF/layout/content.jsp"/>
+				<put-attribute name="content1" value="/WEB-INF/product/topproduct.jsp"/>
+				<put-attribute name="content2" value="/WEB-INF/product/prdlist.jsp"/>
 		
 	</definition>
 	
@@ -17,24 +17,10 @@
 	<definition name="index" extends="mainTemplate">
 	</definition>
 	
-	<definition name="test" extends="mainTemplate">
-		<put-attribute name="content" value="/WEB-INF/test/result.jsp"/>
+	<definition name="main" extends="mainTemplate">
+		<put-attribute name="content1" value="/WEB-INF/product/prdlist.jsp"/>
+		<put-attribute name="content2" value=""/>
 	</definition>
 	
-	<definition name="input/form" extends="mainTemplate">
-		<put-attribute name="content" value="/WEB-INF/emp/memberInput.jsp"/>
-	</definition>
-	
-	<definition name="list" extends="mainTemplate">
-		<put-attribute name="content" value="/WEB-INF/emp/list.jsp"></put-attribute>
-	</definition>
-	
-	<definition name="search/form" extends="mainTemplate">
-		<put-attribute name="content" value="/WEB-INF/emp/search.jsp"></put-attribute>
-	</definition>
-	
-	<definition name="searchlist" extends="mainTemplate">
-		<put-attribute name="content" value="/WEB-INF/emp/searchlist.jsp"></put-attribute>
-	</definition>
 	
 </tiles-definitions>

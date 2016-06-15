@@ -1,8 +1,5 @@
 package product.dao;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import product.dto.ProductDTO;
 import product.dto.ProductRowMapper;
+import product.dto.TopProductRowMapper;
 
 @Repository("productdao")
 public class ProductDAOImpl implements ProductDAO {
@@ -39,7 +37,7 @@ public class ProductDAOImpl implements ProductDAO {
 						 +"order by o.qty desc) "
 				  +"where rownum <=8 ";	
 		
-		return template.query(PRODUCT_TOP, new ProductRowMapper());		
+		return template.query(PRODUCT_TOP, new TopProductRowMapper());		
 	
 	}
 

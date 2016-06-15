@@ -20,7 +20,7 @@ public class ProductController {
 	ProductService service;
 
 	@RequestMapping(value="/prdlist.do", method=RequestMethod.GET)
-	public ModelAndView showList(HttpServletRequest req,String category, String pathurl){
+	public ModelAndView showList(HttpServletRequest req,String category){
 		ModelAndView mav = new ModelAndView();
 		
 		mav.addObject("prdlist", service.productlist(category));
@@ -29,10 +29,10 @@ public class ProductController {
 		if(category==null){
 			mav.addObject("toplist", service.searchTopProduct());
 			
-			mav.setViewName("indexLayout");
+			mav.setViewName("index");
 		}else{
-			mav.addObject("pathurl", pathurl);
-			mav.setViewName("mainLayout");
+
+			mav.setViewName("main");
 		}
 		
 		return mav;

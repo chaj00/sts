@@ -19,6 +19,13 @@ public class ProductDTO {
 	public ProductDTO(){
 		
 	}
+	public ProductDTO(String prd_no,String prd_nm,String img_gen_file_nm ){
+		super();
+		this.prd_no = prd_no;
+		this.prd_nm = prd_nm;
+		this.img_gen_file_nm = img_gen_file_nm;
+		
+	}
 	
 	public ProductDTO(String prd_no, String prd_nm, String category_no, String prd_des, int sell_prc_unit,
 			String sell_start_dt, String sell_end_dt, String dlv_constraint, String as_flg, String return_flg,

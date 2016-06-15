@@ -5,10 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/minishop/common/css/lavalamp_test.css" type="text/css" media="screen">
-<script type="text/javascript" src="/minishop/common/js/jquery-1.2.3.min.js"></script>
-<script type="text/javascript" src="/minishop/common/js/jquery.lavalamp.min.js"></script>
-<script type="text/javascript" src="/minishop/common/js/jquery.easing.min.js"></script>
+<link rel="stylesheet" href="/finalShop/resources/common/css/lavalamp_test.css" type="text/css" media="screen">
+<script type="text/javascript" src="/finalShop/resources/common/js/jquery-1.2.3.min.js"></script>
+<script type="text/javascript" src="/finalShop/resources/common/js/jquery.lavalamp.min.js"></script>
+<script type="text/javascript" src="/finalShop/resources/common/js/jquery.easing.min.js"></script>
 
 
 </head>
@@ -41,13 +41,13 @@
 		<div>
 			<ul class="lavaLampNoImage" id="menu">
 				<li class="current">
-				<a href="/minishop/prdlist.do">Home</a></li>
-				<li><a href="/minishop/prdlist.do?category=CAT000000001&pathurl=../product/prdlist.jsp">DRESS</a></li>
-				<li><a href="/minishop/prdlist.do?category=CAT000000002&pathurl=../product/prdlist.jsp">TOP</a></li>
-				<li><a href="/minishop/prdlist.do?category=CAT000000003&pathurl=../product/prdlist.jsp">BOTTOM</a></li>
-				<li><a href="/minishop/prdlist.do?category=CAT000000004&pathurl=../product/prdlist.jsp">OUTER</a></li>
-				<li><a href="/minishop/prdlist.do?category=CAT000000005&pathurl=../product/prdlist.jsp">ACC</a></li>
-				<li><a href="/minishop/prdlist.do?category=CAT000000006&pathurl=../product/prdlist.jsp">CARDIGAN</a></li>
+				<a href="prdlist.do">Home</a></li>
+				<li><a href="prdlist.do?category=CAT000000001">DRESS</a></li>
+				<li><a href="prdlist.do?category=CAT000000002">TOP</a></li>
+				<li><a href="prdlist.do?category=CAT000000003">BOTTOM</a></li>
+				<li><a href="prdlist.do?category=CAT000000004">OUTER</a></li>
+				<li><a href="prdlist.do?category=CAT000000005">ACC</a></li>
+				<li><a href="prdlist.do?category=CAT000000006">CARDIGAN</a></li>
 			</ul>
 		</div>
 	</div>

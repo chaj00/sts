@@ -8,29 +8,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="width: 800px;margin-left: auto;margin-right: auto;">
-		<div>
-			<jsp:include page="../top.jsp"></jsp:include>
-		</div>
-		<div >
-			<jsp:include page="../product/topproduct.jsp"></jsp:include>
-		</div>
-
-		<div>
-			<jsp:include page="../product/prdlist.jsp"></jsp:include>
-		</div>
-	</div>
-	
-		<div id="header">
-		<tiles:insertAttribute name="top"/>
+	<div id="header">
+		<tiles:insertAttribute name="header"/>
 	</div>
 	
 	<div id="content1">
-		<tiles:insertAttribute name="topproduct"/>
+		<tiles:insertAttribute name="content1"/>
 	</div>
 	
 	<div id="content2">
-		<tiles:insertAttribute name="prdlist"/>
+		<tiles:insertAttribute name="content2"/>
 	</div>
 </body>
 </html>

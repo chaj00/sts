@@ -15,7 +15,7 @@
 <table align="center" cellpadding="0" cellspacing="0" width="479">
     <tr>
         <td width="469" colspan="2" height="42">
-            <p align="center"><code><b><span style="font-size:20pt;">회원가입</span></b></code></p>
+            <p align="center"><code><b><span style="font-size:20pt;">회원수정</span></b></code></p>
         </td>
     </tr>
     <tr>

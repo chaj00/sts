@@ -30,7 +30,7 @@ public class SearchMybatisController {
 		
 		mav.addObject("userlist", service.findByAddr(search));
 		
-		mav.setViewName("searchlist");
+		mav.setViewName("mybatissearchlist");
 		
 		return mav;
 	}

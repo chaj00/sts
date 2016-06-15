@@ -61,7 +61,13 @@
 	<!-- ========================mybatis에 관련된 작업============================= -->
 	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="con"/>
-		<beans:property name="mapperLocations" value="classpath:mapper/*.xml"/>
+
+		<!-- 마이바티스 mapper 파일을 설정xml파일을 만들어서 적용할떄 -->
+		<beans:property name="configLocation" value="/WEB-INF/config/mybatis-config.xml"/>
+		
+		<!-- 마이바티스 mapper 파일을 클래스패스 아래 설정 할떄 -->
+		<!-- <beans:property name="mapperLocations" value="classpath:mapper/*.xml"/> --> 
+
 	</beans:bean>
 	
 	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

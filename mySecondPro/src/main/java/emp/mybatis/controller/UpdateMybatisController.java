@@ -18,8 +18,7 @@ public class UpdateMybatisController {
 	
 	@RequestMapping(value="/mybatisupdate.do", method=RequestMethod.POST)
 	public ModelAndView runUdate(HttpServletRequest req, MyEmpDTO user){
-		System.out.println("update"+user);
 		service.update(user);
-		return new ModelAndView("redirect:list.do");
+		return new ModelAndView("redirect:mybatislist.do");
 	}
 }

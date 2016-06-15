@@ -27,13 +27,13 @@ public class MyEmpMybatisDAOImpl implements MyEmpDAO{
 
 	@Override
 	public void update(MyEmpDTO user) {
-		// TODO Auto-generated method stub
+		sqlSession.update("kitri.myemp.update", user);
 		
 	}
 
 	@Override
 	public void delete(String id) {
-		// TODO Auto-generated method stub
+		sqlSession.delete("kitri.myemp.delete", id);
 		
 	}
 
@@ -50,13 +50,12 @@ public class MyEmpMybatisDAOImpl implements MyEmpDAO{
 
 	@Override
 	public List<MyEmpDTO> findByAddr(String addr) {
-		return sqlSession.selectList("kitri.myemp.search",addr);
+		return sqlSession.selectList("kitri.myemp.search","%"+addr+"%");
 	}
 
 	@Override
 	public MyEmpDTO read(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne("kitri.myemp.read", id);
 	}
 
 }

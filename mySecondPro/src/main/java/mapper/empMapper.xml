@@ -29,6 +29,10 @@
  		update myemp set pass=#{pass}, addr=#{addr}, grade=#{grade} where id=#{id} 
  	</update>
  	
+ 	<select id="read" resultType="emp.dto.MyEmpDTO">
+ 		select * from myemp where id=#{id}
+ 	</select>
+ 	
  	
  
  </mapper>

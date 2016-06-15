@@ -37,4 +37,26 @@
 		<put-attribute name="content" value="/WEB-INF/emp/searchlist.jsp"></put-attribute>
 	</definition>
 	
+	<definition name="detail" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/detail.jsp"></put-attribute>
+	</definition>
+	<definition name="update" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/update.jsp"></put-attribute>
+		
+	</definition>
+	
+	<definition name="mybatissearchlist" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/searchlist_jstl.jsp"></put-attribute>
+	</definition>
+	<definition name="mybatislist" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/mybatislist.jsp"></put-attribute>
+	</definition>
+	<definition name="mybatisdetail" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/mybatisdetail.jsp"></put-attribute>
+	</definition>
+	<definition name="mybatisupdate" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/mybatisupdate.jsp"></put-attribute>
+	</definition>
+
+	
 </tiles-definitions>

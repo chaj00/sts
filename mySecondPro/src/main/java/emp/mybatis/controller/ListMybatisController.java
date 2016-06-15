@@ -24,7 +24,7 @@ public class ListMybatisController{
 		
 		mav.addObject("userlist", service.getMemberList());
 		
-		mav.setViewName("list");
+		mav.setViewName("mybatislist");
 		
 		return mav;
 	}

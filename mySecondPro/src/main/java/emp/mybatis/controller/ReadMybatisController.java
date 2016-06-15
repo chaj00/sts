@@ -23,7 +23,7 @@ public class ReadMybatisController {
 		
 		mav.addObject("user", service.read(id));
 		
-		mav.setViewName("emp/detail");
+		mav.setViewName("mybatisdetail");
 		
 		return mav;
 	}
@@ -34,7 +34,7 @@ public class ReadMybatisController {
 		
 		mav.addObject("user", user);
 		
-		mav.setViewName("emp/update");
+		mav.setViewName("mybatisupdate");
 		
 		return mav;
 	}

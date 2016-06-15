@@ -58,4 +58,14 @@
 		<beans:constructor-arg ref="con"/>		
 	</beans:bean>	
 	
+	<!-- ========================mybatis에 관련된 작업============================= -->
+	<beans:bean id="SessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="con"/>
+		<beans:property name="mapperLocations" value="classpah:mapper/*.xml"/>
+	</beans:bean>
+	
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg ref="sqlSessinFactory"/>
+	</beans:bean>			
+	
 </beans:beans>

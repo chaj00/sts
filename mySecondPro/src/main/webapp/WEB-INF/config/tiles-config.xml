@@ -45,6 +45,9 @@
 		
 	</definition>
 	
+	<definition name="mybatisinput/form" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/mybatismemberInput.jsp"/>
+	</definition>
 	<definition name="mybatissearchlist" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/emp/searchlist_jstl.jsp"></put-attribute>
 	</definition>

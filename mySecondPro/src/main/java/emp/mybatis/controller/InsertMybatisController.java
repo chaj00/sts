@@ -19,14 +19,13 @@ public class InsertMybatisController {
 	//get방식으로 요청될때 실행할 메소드 - insert페이지를 response
 	@RequestMapping(value="/mybatisinsert.do", method=RequestMethod.GET)
 	public String showPage(){
-		return "input/form";
+		return "mybatisinput/form";
 	}
 	//post방식으로 요청될때 실행할 메소드 - 실제 db에 insert를 하기 위한 기능을 수행
 	@RequestMapping(value="/mybatisinsert.do", method=RequestMethod.POST)
 	public ModelAndView runInsert(HttpServletRequest req, MyEmpDTO user, String id){
-		System.out.println(user+"~~~~~"+id);
 		service.insert(user);
-		return new ModelAndView("redirect:index.do");
+		return new ModelAndView("redirect:mybatislist.do");
 	}
 	
 }

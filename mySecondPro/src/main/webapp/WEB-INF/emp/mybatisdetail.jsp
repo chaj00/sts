@@ -14,7 +14,7 @@
 		<table width="400" border="1">
 			<tr>
 				<td>회원아이디</td>
-				<td><input type="text" name="id" value=<%=user.getId()%> readonly="readonly"/></td>
+				<td><input type="text" name="id" value="${user.id}" readonly="readonly"/></td>
 			</tr>
 			<tr>
 				<td>회원패스워드</td>

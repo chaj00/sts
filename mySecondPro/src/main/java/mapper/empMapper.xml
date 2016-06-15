@@ -4,8 +4,31 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
  <mapper namespace="kitri.myemp" >
+ 	 	
  	<select id="count" resultType="int">
  		select count(*) from myemp
  	</select>
+ 	
+ 	<insert id="insert" parameterType="emp.dto.MyEmpDTO">
+ 		insert into myemp values(#{id},#{pass},#{addr},1000,#{grade},'001',#{name})
+ 	</insert>
+ 	
+ 	<select id="list" resultType="emp.dto.MyEmpDTO">
+ 		select * from myemp
+ 	</select>
+ 	
+ 	<select id="search" parameterType="String" resultType="emp.dto.MyEmpDTO">
+ 		select * from myemp where addr like #{addr}
+ 	</select>
+ 	
+ 	<delete id="delete" parameterType="String">
+ 		delete from myemp where id= #{id}
+ 	</delete>
+ 	
+ 	<update id="update" parameterType="emp.dto.MyEmpDTO">
+ 		update myemp set pass=#{pass}, addr=#{addr}, grade=#{grade} where id=#{id} 
+ 	</update>
+ 	
+ 	
  
  </mapper>

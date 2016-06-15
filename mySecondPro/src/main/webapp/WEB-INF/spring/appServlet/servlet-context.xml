@@ -59,13 +59,13 @@
 	</beans:bean>	
 	
 	<!-- ========================mybatis에 관련된 작업============================= -->
-	<beans:bean id="SessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="con"/>
-		<beans:property name="mapperLocations" value="classpah:mapper/*.xml"/>
+		<beans:property name="mapperLocations" value="classpath:mapper/*.xml"/>
 	</beans:bean>
 	
 	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<beans:constructor-arg ref="sqlSessinFactory"/>
+		<beans:constructor-arg ref="sqlSessionFactory"/>
 	</beans:bean>			
 	
 </beans:beans>

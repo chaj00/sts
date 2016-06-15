@@ -13,13 +13,13 @@ import emp.dto.MyEmpDTO;
 @Service
 public class MyEmpServiceImpl implements MyEmpService{
 	@Autowired
-	@Qualifier("empdao")
+	@Qualifier("empmybatis")
 	MyEmpDAO dao;
 
 
 	@Override
 	public int count() {
-		return 0;
+		return dao.count();
 	}
 
 	@Override

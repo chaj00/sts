@@ -13,7 +13,7 @@
 
 </head>
 <body>
-	<div style="margin-left; auto;margin-right:auto;width:800px">
+	<div style="margin-left; auto;margin-right:auto;width:1200px">
 		<h1 style="float: left;">자바나라 쇼핑몰</h1>
 
 		<div>

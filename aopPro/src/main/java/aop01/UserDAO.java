@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
 
-@Repository("userdao")
 public class UserDAO implements DAO{
 
 	@Override

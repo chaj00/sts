@@ -7,7 +7,6 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="aop01"></context:component-scan>
-	<context:component-scan base-package="aop02"></context:component-scan>
+	<context:component-scan base-package="aop"></context:component-scan>
 	<aop:aspectj-autoproxy/>
 </beans>

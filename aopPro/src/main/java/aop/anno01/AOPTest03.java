@@ -1,20 +1,18 @@
-package aop02;
+package aop.anno01;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import aop01.DAO;
-import aop01.UserDTO;
-
-public class AOPTest02 {
+public class AOPTest03 {
 
 	public static void main(String[] args) {
 		ApplicationContext factory
-			= new ClassPathXmlApplicationContext("config/aopanno02.xml");
+			= new ClassPathXmlApplicationContext("config/aopanno.xml");
 		DAO dao = (DAO)factory.getBean("userdao");
 		dao.getUser();
 		dao.getUserLIst(new UserDTO());
 		dao.addUser(new UserDTO());
+		dao.deleteUser(new UserDTO());
 		dao.selectAll();
 
 	}

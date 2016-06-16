@@ -16,7 +16,7 @@ public class IndexController {
 	public ModelAndView main(){
 		//prd.showList(req, null);
 		
-		return new ModelAndView("redirect:prdlist.do");
+		return new ModelAndView("redirect:mybatisprdlist.do");
 		
 	}
 

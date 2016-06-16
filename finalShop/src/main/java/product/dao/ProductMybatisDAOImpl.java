@@ -20,8 +20,7 @@ public class ProductMybatisDAOImpl implements ProductDAO {
 
 	@Override
 	public List<ProductDTO> searchTopProduct() {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList("kitri.finalShop.searchtoplist");
 	}
 
 	@Override

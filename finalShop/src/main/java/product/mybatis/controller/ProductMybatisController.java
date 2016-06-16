@@ -19,7 +19,7 @@ public class ProductMybatisController {
 	@Autowired
 	ProductService service;
 
-	@RequestMapping(value="/prdlist.do", method=RequestMethod.GET)
+	@RequestMapping(value="/mybatisprdlist.do", method=RequestMethod.GET)
 	public ModelAndView showList(HttpServletRequest req,String category){
 		ModelAndView mav = new ModelAndView();
 		

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="dao" class="aop01.UserDAO"/>
+	
+	<!--  공통관심사항이 정의된 빈을 등록 -->
+	<bean id="calcAdvice" class="aop02.CalcAdvice"/>
+	
+	<!--  AOP에 대한 설정 -->
+	<aop:config>
+		  <aop:pointcut expression="execution(* aop01.UserDAO.*())" id="firstPointcut"/>
+		  
+		  <aop:aspect id="myaspect01" ref="calcAdvice">
+		  	<aop:before method="set" pointcut-ref="firstPointcut"/>
+		  	<aop:after method="calc" pointcut-ref="firstPointcut"/>
+		  </aop:aspect>
+	</aop:config>
+</beans>

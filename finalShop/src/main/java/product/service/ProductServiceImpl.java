@@ -12,7 +12,7 @@ import product.dto.ProductDTO;
 @Service
 public class ProductServiceImpl implements ProductService {
 	@Autowired
-	@Qualifier("productdao")
+	@Qualifier("mybatisprddao")
 	ProductDAO dao;
 	
 	

@@ -22,6 +22,7 @@ public interface MyEmpDAO {
 	
 	MyEmpDTO read(String id);
 	
+	
 }
 
 

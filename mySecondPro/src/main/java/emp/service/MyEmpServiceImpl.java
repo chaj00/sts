@@ -57,5 +57,12 @@ public class MyEmpServiceImpl implements MyEmpService{
 		return dao.read(id);
 	}
 
+	@Override
+	public void txinsert(MyEmpDTO user) {
+		dao.insert(user);
+		dao.insert(null);
+		
+	}
+
 	
 }

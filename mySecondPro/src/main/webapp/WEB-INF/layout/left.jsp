@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div>
-		<h4>메인페이지</h4>
+		<h4><a href="index.do">메인페이지</a></h4>
 
 		<hr/>
 		<h5><a href="test.do">스프링 웹 MVC연동하기</a></h5>
@@ -19,6 +19,7 @@
 		<h5><a href="mybatislist.do">회원목록보기(mybatis기반)</a></h5>
 		<h5><a href="mybatisinsert.do">회원가입(mybatis기반)</a></h5>
 		<h5><a href="mybatissearch.do">회원검색(mybatis기반)</a></h5>
+		<h5><a href="txInsert.do">회원가입(트랜잭션처리)</a></h5>
 		
 
 	</div>

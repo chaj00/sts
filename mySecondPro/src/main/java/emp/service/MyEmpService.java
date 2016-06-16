@@ -22,6 +22,8 @@ public interface MyEmpService {
 	
 	MyEmpDTO read(String id);
 	
+	void txinsert(MyEmpDTO user);
+	
 }
 
 

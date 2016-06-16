@@ -60,6 +60,10 @@
 	<definition name="mybatisupdate" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/emp/mybatisupdate.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="tx/input" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/txmemberInput.jsp"></put-attribute>
+	</definition>
 
 	
 </tiles-definitions>

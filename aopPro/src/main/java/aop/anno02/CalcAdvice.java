@@ -12,9 +12,9 @@ public class CalcAdvice {
 	private int val;
 	
 	@Pointcut("execution(* aop.anno01.UserDAO.*())")
-	public void myPointcut(){}
+	public void calcPointcut(){}
 	
-	@Before("myPointcut()")
+	@Before("calcPointcut()")
 	public void set(){
 		int rand = (int)(Math.random()*100)+1;
 		
@@ -28,7 +28,7 @@ public class CalcAdvice {
 		val = rand;
 	}
 	
-	@After("myPointcut()")
+	@After("calcPointcut()")
 	public void calc(){
 		int result=0;
 		for(int i=1; i<=val ; i++){

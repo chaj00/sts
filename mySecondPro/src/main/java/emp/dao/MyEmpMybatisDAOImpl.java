@@ -59,7 +59,7 @@ public class MyEmpMybatisDAOImpl implements MyEmpDAO{
 	}
 
 	@Override
-	public MyEmpDTO mybatislogin(MyEmpDTO user) {
+	public MyEmpDTO login(MyEmpDTO user) {
 		return sqlSession.selectOne("kitri.myemp.mybatislogin", user);
 	}
 

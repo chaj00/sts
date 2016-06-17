@@ -66,7 +66,7 @@ public class MyEmpServiceImpl implements MyEmpService{
 
 	@Override
 	public MyEmpDTO login(MyEmpDTO user) {
-		return dao.mybatislogin(user);
+		return dao.login(user);
 	}
 
 	

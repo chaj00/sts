@@ -83,7 +83,7 @@ public class MyEmpDAOImpl implements MyEmpDAO{
 	}
 
 	@Override
-	public MyEmpDTO mybatislogin(MyEmpDTO user) {
+	public MyEmpDTO login(MyEmpDTO user) {
 		// TODO Auto-generated method stub
 		return null;
 	}

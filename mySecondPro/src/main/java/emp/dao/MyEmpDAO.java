@@ -22,7 +22,7 @@ public interface MyEmpDAO {
 	
 	MyEmpDTO read(String id);
 	
-	MyEmpDTO mybatislogin(MyEmpDTO user);
+	MyEmpDTO login(MyEmpDTO user);
 	
 	
 }

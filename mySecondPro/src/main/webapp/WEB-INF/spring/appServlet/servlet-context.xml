@@ -111,6 +111,11 @@
 			<beans:bean class="etc.controller.TimeCheckInterceptor"/>
 		</interceptor>
 	
+		<interceptor>
+			<mapping path="/mybatislist.do"/>
+			<mapping path="/mybatissearch.do"/>
+			<beans:bean class="etc.controller.LoginCheckInterceptor"/>
+		</interceptor>
 	</interceptors>
 
 </beans:beans>

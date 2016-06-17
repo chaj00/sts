@@ -1,6 +1,7 @@
 package emp.mybatis.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,21 +23,19 @@ public class LoginMybatisController {
 		return "login/form";
 	}
 	@RequestMapping(value="/login.do", method=RequestMethod.POST)
-	public ModelAndView runLogin(HttpServletRequest req, MyEmpDTO user){
-		
-		ModelAndView mav = new ModelAndView();
+	public String runLogin(HttpServletRequest req, MyEmpDTO user){
 		
 		MyEmpDTO loginuser = service.login(user);
+
 		if( loginuser != null){
-			mav.addObject("user", loginuser );
-			mav.setViewName("index");
+			req.getSession().setAttribute("user", loginuser);
+			return "index";
 		}else{
-			mav.setViewName("login/form");
+			return "login/form";
 		}
 			
 		
 		
-		return mav;
 	}
 
 }

@@ -14,10 +14,7 @@
 <body>
 	<div class="main">
 		<h1>자바나라</h1>
-		<hr />
-		<%if( session.isNew()==false){ %>
-			<h3> ${user.name}(${user.id})님 로그인 성공</h3>
-		<%} %>
+		
 		<img alt="" src="/mySecondPro/images/jang1.jpg" width="500" height="600">
 	</div>
 </body>

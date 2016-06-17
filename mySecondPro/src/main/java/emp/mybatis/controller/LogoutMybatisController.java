@@ -14,7 +14,7 @@ import emp.service.MyEmpService;
 @Controller
 public class LogoutMybatisController {
 	
-	@RequestMapping(value="logout.do", method=RequestMethod.GET)
+	@RequestMapping(value="/logout.do", method=RequestMethod.GET)
 	public ModelAndView runLogOut(HttpServletRequest req){
 
 		HttpSession ses = req.getSession(false);

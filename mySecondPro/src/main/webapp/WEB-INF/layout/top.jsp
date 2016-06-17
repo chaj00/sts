@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,9 +24,21 @@
 				 	<li class="divider-vertical"></li>
 					<li><a href="#">인사관리</a></li>
 					<li class="divider-vertical"></li>
-					<li><a href="login.do">로그인</a></li>
-					<li class="divider-vertical"></li>
-					<li><a href="logout.do">로그아웃</a></li>
+					
+					<c:choose>
+						<c:when test="${user == null}">
+							<li><a href="login.do">로그인</a></li>
+						</c:when>
+						
+						<c:otherwise>
+							<li class="divider-vertical"></li>
+							<li><a href="logout.do">로그아웃</a></li>
+						</c:otherwise>
+					</c:choose>
+					
+				
+					
+					
 				</ul>
 				<form class="navbar-form pull-right"
 						 method="get" 

@@ -23,8 +23,14 @@ public class LoginMybatisController {
 	}
 	@RequestMapping(value="/mybatislogin.do", method=RequestMethod.POST)
 	public ModelAndView runLogin(HttpServletRequest req, MyEmpDTO user){
-		service.login(user);
-		return new ModelAndView("redirect:index.do");
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("user", service.login(user));
+		
+		mav.setViewName("index");
+		
+		return mav;
 	}
 
 }

@@ -3,8 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-   <mapper namespace="kitri.finalShop">
-   	<select id="login" parameterType="mem" resultType="mem">
+   <mapper namespace="kitri.finalShop2">
+   	<select id="login" parameterType="member.dto.MemberDTO" resultType="member.dto.MemberDTO">
    		select * from TB_MEM where MEM_ID=#{MEM_ID} and PWD=#{PWD}
    	</select>
    

@@ -22,7 +22,8 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public MemberDTO login(MemberDTO user)  {
-		return sqlSession.selectOne("kitri.finalShop.login", user);
+		System.out.println(sqlSession.selectOne("kitri.finalShop2.login", user));
+		return sqlSession.selectOne("kitri.finalShop2.login", user);
 	}
 
 	@Override

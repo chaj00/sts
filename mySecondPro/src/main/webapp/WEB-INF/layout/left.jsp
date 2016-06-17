@@ -20,7 +20,7 @@
 		<h5><a href="/mySecondPro/mybatisinsert.do">회원가입(mybatis기반)</a></h5>
 		<h5><a href="/mySecondPro/mybatissearch.do">회원검색(mybatis기반)</a></h5>
 		<h5><a href="/mySecondPro/txInsert.do">회원가입(트랜잭션처리)</a></h5>
-		<h5><a href="/mySecondPro/i18ntest.do?lang=kr">다국어지원</a></h5>
+		<h5><a href="/mySecondPro/i18ntest.do?lang=ko">다국어지원</a></h5>
 		<a href="?lang=en">en</a>
 		<a href="?lang=jp">jp</a>
 		

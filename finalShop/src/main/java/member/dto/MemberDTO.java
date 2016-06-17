@@ -41,27 +41,27 @@ public class MemberDTO {
 			EMAIL_RCV_FLG = eMAIL_RCV_FLG;
 		}
 	 //select¿ë
-	public MemberDTO(String mEM_ID, String mEM_NM, String mEM_CD, String pWD,
-			String pWD_HINT, String pWD_HINT_ANS, String sSN, String bIRTH_DT,
-			String mALE_FLG, String tEL_NO, String cELL_NO, String aDDR,
-			String eMAIL, String eMAIL_RCV_FLG, String mEM_REG_DTM) {
-		super();
-		MEM_ID = mEM_ID;
-		MEM_NM = mEM_NM;
-		MEM_CD = mEM_CD;
-		PWD = pWD;
-		PWD_HINT = pWD_HINT;
-		PWD_HINT_ANS = pWD_HINT_ANS;
-		SSN = sSN;
-		BIRTH_DT = bIRTH_DT;
-		MALE_FLG = mALE_FLG;
-		TEL_NO = tEL_NO;
-		CELL_NO = cELL_NO;
-		ADDR = aDDR;
-		EMAIL = eMAIL;
-		EMAIL_RCV_FLG = eMAIL_RCV_FLG;
-		MEM_REG_DTM = mEM_REG_DTM;
-	}
+	 public MemberDTO(String mEM_ID, String mEM_NM, String mEM_CD, String pWD, String pWD_HINT, String pWD_HINT_ANS,
+				String sSN, String bIRTH_DT, String mALE_FLG, String tEL_NO, String cELL_NO, String aDDR, String eMAIL,
+				String eMAIL_RCV_FLG, String mEM_REG_DTM) {
+			super();
+			MEM_ID = mEM_ID;
+			MEM_NM = mEM_NM;
+			MEM_CD = mEM_CD;
+			PWD = pWD;
+			PWD_HINT = pWD_HINT;
+			PWD_HINT_ANS = pWD_HINT_ANS;
+			SSN = sSN;
+			BIRTH_DT = bIRTH_DT;
+			MALE_FLG = mALE_FLG;
+			TEL_NO = tEL_NO;
+			CELL_NO = cELL_NO;
+			ADDR = aDDR;
+			EMAIL = eMAIL;
+			EMAIL_RCV_FLG = eMAIL_RCV_FLG;
+			MEM_REG_DTM = mEM_REG_DTM;
+		}
+	
 	
 	@Override
 	public String toString() {
@@ -73,6 +73,7 @@ public class MemberDTO {
 				+ ADDR + ", EMAIL=" + EMAIL + ", EMAIL_RCV_FLG="
 				+ EMAIL_RCV_FLG + ", MEM_REG_DTM=" + MEM_REG_DTM + "]";
 	}
+	
 	public String getMEM_ID() {
 		return MEM_ID;
 	}

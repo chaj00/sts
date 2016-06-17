@@ -42,7 +42,6 @@
 	</definition>
 	<definition name="update" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/emp/update.jsp"></put-attribute>
-		
 	</definition>
 	
 	<definition name="mybatisinput/form" extends="mainTemplate">
@@ -63,6 +62,10 @@
 	
 	<definition name="tx/input" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/emp/txmemberInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="mybatislogin" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/mybatislogin.jsp"></put-attribute>
 	</definition>
 
 	

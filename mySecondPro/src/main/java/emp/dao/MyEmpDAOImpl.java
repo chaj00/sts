@@ -82,5 +82,11 @@ public class MyEmpDAOImpl implements MyEmpDAO{
 																new MyEmpRowMapper());
 	}
 
+	@Override
+	public MyEmpDTO mybatislogin(MyEmpDTO user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

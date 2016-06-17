@@ -19,6 +19,7 @@
 		<h5><a href="mybatislist.do">회원목록보기(mybatis기반)</a></h5>
 		<h5><a href="mybatisinsert.do">회원가입(mybatis기반)</a></h5>
 		<h5><a href="mybatissearch.do">회원검색(mybatis기반)</a></h5>
+		<h5><a href="mybatislogin.do">로그인(mybatis기반)</a></h5>
 		<h5><a href="txInsert.do">회원가입(트랜잭션처리)</a></h5>
 		
 

@@ -58,5 +58,11 @@ public class MyEmpMybatisDAOImpl implements MyEmpDAO{
 		return sqlSession.selectOne("kitri.myemp.read", id);
 	}
 
+	@Override
+	public MyEmpDTO mybatislogin(MyEmpDTO user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

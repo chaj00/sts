@@ -101,5 +101,16 @@
 		<aop:pointcut expression="execution(public * emp.service.MyEmpServiceImpl.*(..))" id="trans"/>
 		<aop:advisor id="txadvisor" advice-ref="txAdvice" pointcut-ref="trans"/>
 	</aop:config>
+	
+	
+	<!-- 인터셉터등록 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/mybatiscount.do"/>
+			<mapping path="/mybatisinsert.do"/>
+			<beans:bean class="etc.controller.TimeCheckInterceptor"/>
+		</interceptor>
+	
+	</interceptors>
 
 </beans:beans>

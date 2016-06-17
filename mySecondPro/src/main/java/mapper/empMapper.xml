@@ -33,6 +33,10 @@
  		select * from myemp where id=#{id}
  	</select>
  	
+ 	<select id="mybatislogin" parameterType="emp" resultType="emp">
+ 		select * from myemp where id=#{id} and pass=#{pass}
+ 	</select>
+ 	
  	
  
  </mapper>

@@ -24,6 +24,8 @@ public interface MyEmpService {
 	
 	void txinsert(MyEmpDTO user);
 	
+	MyEmpDTO login(MyEmpDTO user);
+	
 }
 
 

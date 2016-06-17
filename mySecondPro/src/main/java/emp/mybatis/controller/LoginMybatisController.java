@@ -26,9 +26,15 @@ public class LoginMybatisController {
 		
 		ModelAndView mav = new ModelAndView();
 		
-		mav.addObject("user", service.login(user));
+		MyEmpDTO loginuser = service.login(user);
+		if( loginuser != null){
+			mav.addObject("user", loginuser );
+			mav.setViewName("index");
+		}else{
+			mav.setViewName("login/form");
+		}
+			
 		
-		mav.setViewName("index");
 		
 		return mav;
 	}

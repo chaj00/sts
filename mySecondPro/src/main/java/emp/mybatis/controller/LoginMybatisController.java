@@ -17,11 +17,11 @@ public class LoginMybatisController {
 	@Autowired
 	MyEmpService service;
 	
-	@RequestMapping(value="/mybatislogin.do", method=RequestMethod.GET)
+	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String showPage(){
-		return "mybatislogin";
+		return "login/form";
 	}
-	@RequestMapping(value="/mybatislogin.do", method=RequestMethod.POST)
+	@RequestMapping(value="/login.do", method=RequestMethod.POST)
 	public ModelAndView runLogin(HttpServletRequest req, MyEmpDTO user){
 		
 		ModelAndView mav = new ModelAndView();

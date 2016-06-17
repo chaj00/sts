@@ -64,8 +64,8 @@
 		<put-attribute name="content" value="/WEB-INF/emp/txmemberInput.jsp"></put-attribute>
 	</definition>
 	
-	<definition name="mybatislogin" extends="mainTemplate">
-		<put-attribute name="content" value="/WEB-INF/emp/mybatislogin.jsp"></put-attribute>
+	<definition name="login/form" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/login.jsp"></put-attribute>
 	</definition>
 
 	

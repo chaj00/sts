@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -18,7 +19,7 @@ public class I18NTestController {
 	@Autowired
 	LocaleResolver resolver;
 	
-	@RequestMapping("/i18ntest.do")
+	@RequestMapping(value="/i18ntest.do", method=RequestMethod.GET)
 	public ModelAndView showPage(String lang, HttpServletRequest req, HttpServletResponse res) 
 			throws Exception{
 		//언어 정보를 이용해서 Locale을 객체를 생성

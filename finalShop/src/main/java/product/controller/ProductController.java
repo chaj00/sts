@@ -1,7 +1,5 @@
 package product.controller;
 
-import java.util.ArrayList;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +18,13 @@ public class ProductController {
 	ProductService service;
 
 	@RequestMapping(value="/prdlist.do", method=RequestMethod.GET)
-	public ModelAndView showList(HttpServletRequest req,String category){
+	public ModelAndView showList(HttpServletRequest req,String category_no){
 		ModelAndView mav = new ModelAndView();
 		
-		mav.addObject("prdlist", service.productlist(category));
+		mav.addObject("prdlist", service.productlist(new ProductDTO(category_no)) );
 		
 		
-		if(category==null){
+		if(category_no==null){
 			mav.addObject("toplist", service.searchTopProduct());
 			
 			mav.setViewName("index");

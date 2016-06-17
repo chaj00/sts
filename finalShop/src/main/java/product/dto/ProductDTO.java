@@ -19,6 +19,11 @@ public class ProductDTO {
 	public ProductDTO(){
 		
 	}
+	public ProductDTO(String category_no){
+		super();
+		this.category_no = category_no;
+	}
+	
 	public ProductDTO(String prd_no,String prd_nm,String img_gen_file_nm ){
 		super();
 		this.prd_no = prd_no;

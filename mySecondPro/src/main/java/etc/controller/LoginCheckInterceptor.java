@@ -13,11 +13,9 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-
-		MyEmpDTO user = (MyEmpDTO)request.getSession().getAttribute("user");
 		
-		if(user == null){
-			response.sendRedirect("login.do");
+		if(request.getSession(false).getAttribute("user")==null){
+			response.sendRedirect("/mySecondPro/login.do");
 			return false;
 		}
 		

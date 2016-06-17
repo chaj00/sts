@@ -5,8 +5,8 @@ import java.util.List;
 import product.dto.ProductDTO;
 
 public interface ProductService {
-	
-	List<ProductDTO> productlist(String category);	//ProductDAOImpl의 productlist()를 호출하는 메소드
+	List<ProductDTO> productlist(String category_no);
+	List<ProductDTO> productlist(ProductDTO category_no);	//ProductDAOImpl의 productlist()를 호출하는 메소드
 	List<ProductDTO> searchTopProduct();
 	ProductDTO read(String prd_no);
 }

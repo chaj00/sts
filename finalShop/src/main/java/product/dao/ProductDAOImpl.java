@@ -16,11 +16,11 @@ public class ProductDAOImpl implements ProductDAO {
 	private JdbcTemplate template;
 
 	@Override
-	public List<ProductDTO> productlist(String category){
-		if(category==null){
+	public List<ProductDTO> productlist(String category_no){
+		if(category_no==null){
 			return template.query("select * from TB_PRODUCT", new ProductRowMapper());
 		}else{
-			return template.query("select * from TB_PRODUCT where category_no=?", new Object[]{category},new ProductRowMapper());
+			return template.query("select * from TB_PRODUCT where category_no=?", new Object[]{category_no},new ProductRowMapper());
 		}
 
 	}
@@ -43,6 +43,12 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public ProductDTO read(String prd_no){
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductDTO> productlist(ProductDTO category_no) {
 		// TODO Auto-generated method stub
 		return null;
 	}

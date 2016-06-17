@@ -27,12 +27,12 @@
 					
 					<c:choose>
 						<c:when test="${user == null}">
-							<li><a href="login.do">로그인</a></li>
+							<li><a href="/mySecondPro/login.do">로그인</a></li>
 						</c:when>
 						
 						<c:otherwise>
 							<li class="divider-vertical"></li>
-							<li><a href="logout.do">로그아웃</a></li>
+							<li><a href="/mySecondPro/logout.do">로그아웃</a></li>
 						</c:otherwise>
 					</c:choose>
 					
@@ -42,7 +42,7 @@
 				</ul>
 				<form class="navbar-form pull-right"
 						 method="get" 
-						 action="/template/search.do">
+						 action="/mySecondPro/search.do">
 					<input type="text" name="search">
 					<input type="submit" value="검색">
 				</form>

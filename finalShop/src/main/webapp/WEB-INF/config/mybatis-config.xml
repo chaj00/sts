@@ -6,10 +6,12 @@
   <configuration>
  	<typeAliases>
  		<typeAlias type="product.dto.ProductDTO" alias="prd"/>
+ 		<typeAlias type="member.dto.MemberDTO" alias="mem"/>
  	</typeAliases>
  	 
   	<mappers>
   		<mapper resource="mapper/productMapper.xml"/>
+  		<mapper resource="mapper/memberMapper.xml"/>
   	</mappers>
   
   

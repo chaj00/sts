@@ -11,7 +11,7 @@
 </script>
 </head>
 <body onload="test()">
-	<form name="login_frm" action="/minishop/login.do" method="post">
+	<form name="login_frm" action="login.do" method="post">
 		<table cellpadding="0" cellspacing=5 width="815" bgcolor=#f3f3f3
 			border=0>
 			<tr>
@@ -38,30 +38,30 @@
 
 																		<tr>
 																			<td colspan=3><img
-																				src="/minishop/images/page_login.gif"></td>
+																				src="/finalShop/resources/images/page_login.gif"></td>
 																		</tr>
 																		<tr>
 																			<td height=25></td>
 																		</tr>
 																		<tr>
-																			<td background="/minishop/images/inputBg.gif"><img
-																				src="/minishop/images/login_id.gif"></td>
-																			<td background="/minishop/images/inputBg.gif"><input
+																			<td background="/finalShop/resources/images/inputBg.gif"><img
+																				src="/finalShop/resources/images/login_id.gif"></td>
+																			<td background="/finalShop/resources/images/inputBg.gif"><input
 																				type="text" name="id" size="15" class="grayinput"
 																				tabindex=1 style="width: 156;"
 																				 value=""></td>
 																			<td rowspan=3 style="padding-left: 10" valign=bottom>
 																			<input
-																				type='image' src="/minishop/images/btn_login.gif"
+																				type='image' src="/finalShop/resources/images/btn_login.gif"
 																				border="0" tabindex=3></td>
 																		</tr>
 																		<tr>
 																			<td height=10></td>
 																		</tr>
 																		<tr>
-																			<td background="/minishop/images/inputBg.gif"><img
-																				src="/minishop/images/login_pass.gif"></td>
-																			<td background="/minishop/images/inputBg.gif"><input
+																			<td background="/finalShop/resources/images/inputBg.gif"><img
+																				src="/finalShop/resources/images/login_pass.gif"></td>
+																			<td background="/finalShop/resources/images/inputBg.gif"><input
 																				type="password" name="passwd" size="15"
 																				class="grayinput" tabindex='2' style='width: 156;'>
 																			</td>

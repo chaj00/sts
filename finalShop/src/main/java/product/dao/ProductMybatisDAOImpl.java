@@ -15,6 +15,11 @@ public class ProductMybatisDAOImpl implements ProductDAO {
 	
 	@Override
 	public List<ProductDTO> productlist(String category) {
+		return null;
+	}
+	
+	@Override
+	public List<ProductDTO> productlist(ProductDTO category) {
 		return sqlSession.selectList("kitri.finalShop.prdlist", category);
 	}
 
@@ -28,5 +33,7 @@ public class ProductMybatisDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

@@ -22,5 +22,10 @@
 		<put-attribute name="content2" value=""/>
 	</definition>
 	
+	<definition name="login/form" extends="mainTemplate">
+		<put-attribute name="content1" value="/WEB-INF/member/login.jsp"/>
+		<put-attribute name="content2" value=""/>
+	</definition>
+	
 	
 </tiles-definitions>

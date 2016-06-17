@@ -67,6 +67,10 @@
 	<definition name="login/form" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/emp/login.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="i18ntest" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/login.jsp"></put-attribute>
+	</definition>
 
 	
 </tiles-definitions>

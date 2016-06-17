@@ -15,7 +15,7 @@ import emp.service.MyEmpService;
 public class LogoutMybatisController {
 	
 	@RequestMapping(value="/logout.do", method=RequestMethod.GET)
-	public ModelAndView runLogOut(HttpServletRequest req){
+	public String runLogOut(HttpServletRequest req){
 
 		HttpSession ses = req.getSession(false);
 		
@@ -23,6 +23,6 @@ public class LogoutMybatisController {
 			ses.invalidate();
 			
 		}
-		return new ModelAndView("redirect:index.do");
+		return "index";
 	}
 }

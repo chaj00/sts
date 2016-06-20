@@ -12,12 +12,12 @@ public class BoardRowMapper implements RowMapper<BoardDTO> {
 	public BoardDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
 		//List의 한 요소로 add시킬 레코드를 dto로 변환하는 작업을 수행
 //		System.out.println("mapRow()===>"+rowNum);
-		BoardDTO emp = new BoardDTO(rs.getString(1),rs.getString(2),
-									rs.getString(3),rs.getInt(4),
-									rs.getString(5),rs.getString(6),
-									rs.getString(7));
+		BoardDTO board = new BoardDTO(rs.getString(1),rs.getString(2),
+									rs.getString(3),rs.getString(4),
+									rs.getInt(5),rs.getString(6),
+									rs.getString(7),rs.getString(8));
 		
-		return emp;
+		return board;
 	}
 
 

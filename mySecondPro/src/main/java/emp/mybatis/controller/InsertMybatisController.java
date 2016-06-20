@@ -23,7 +23,7 @@ public class InsertMybatisController {
 	}
 	//post방식으로 요청될때 실행할 메소드 - 실제 db에 insert를 하기 위한 기능을 수행
 	@RequestMapping(value="/mybatisinsert.do", method=RequestMethod.POST)
-	public ModelAndView runInsert(HttpServletRequest req, MyEmpDTO user, String id){
+	public ModelAndView runInsert(HttpServletRequest req, MyEmpDTO user){
 		service.insert(user);
 		return new ModelAndView("redirect:mybatislist.do");
 	}

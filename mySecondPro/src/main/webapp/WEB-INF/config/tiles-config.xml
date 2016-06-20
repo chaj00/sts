@@ -71,6 +71,10 @@
 	<definition name="i18ntest" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/views/message.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="upload/form" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/emp/upload.jsp"></put-attribute>
+	</definition>
 
 	
 </tiles-definitions>

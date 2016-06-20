@@ -21,7 +21,7 @@
 			<h5 style="float: right; margin-left: 10px">
 			<a href="#">오늘의날씨</a></h5>
 			<h5 style="float: right; margin-left: 10px">
-			<a href="#">게시판</a></h5>
+			<a href="/finalShop/board_list.do">게시판</a></h5>
 			<h5 style="float: right; margin-left: 10px">e-book</h5>
 			
 			<h5 style="float: right; margin-left: 10px">

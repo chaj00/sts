@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,7 +23,7 @@
  
     <tr>
         <td width="104">
-            <p><code><b>아이디</b></code></p>
+            <p><code><b><spring:message code="member.form.id"/></b></code></p>
         </td>
         <td width="359">
             <p><code><input type="text" name="id" size="30"></code></p>
@@ -29,7 +31,7 @@
     </tr>
    <tr>
         <td width="104">
-            <p><code><b>비밀번호</b></code></p>
+            <p><code><b><spring:message code="member.form.pass"/></b></code></p>
         </td>
         <td width="359">
             <p><code><input type="text" name="pass" size="30"></code></p>
@@ -37,7 +39,7 @@
     </tr>
     <tr>
         <td width="104">
-            <p><code><b>성명</b></code></p>
+            <p><code><b><spring:message code="member.form.name"/></b></code></p>
         </td>
         <td width="359">
             <p><code><input type="text" name="name" size="30"></code></p>
@@ -45,7 +47,7 @@
     </tr>
     <tr>
         <td width="104">
-            <p><code><b>주소</b></code></p>
+            <p><code><b><spring:message code="member.form.addr"/></b></code></p>
         </td>
         <td width="359">
             <p><code><input type="text" name="addr" size="51"></code></p>

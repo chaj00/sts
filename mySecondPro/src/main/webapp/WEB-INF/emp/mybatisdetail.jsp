@@ -12,6 +12,7 @@
 	<div align="center">
 	<form name="form" method="post" action="mybatisread.do">
 		<table width="400" border="1">
+		
 			<tr>
 				<td>회원아이디</td>
 				<td><input type="text" name="id" value="${user.id}" readonly="readonly"/></td>

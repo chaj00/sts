@@ -11,11 +11,11 @@
 
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
 <form name="form1" method="post" 
-					action="mybatisupdate.do">
+					action="board_update.do">
 <table align="center" cellpadding="0" cellspacing="0" width="479">
     <tr>
         <td width="469" colspan="2" height="42">
-            <p align="center"><code><b><span style="font-size:20pt;">회원수정</span></b></code></p>
+            <p align="center"><code><b><span style="font-size:20pt;">게시물수정</span></b></code></p>
         </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@
         </td>
         <td width="359">
             <p><code><input type="hidden" name="id" 
-            value="<%=user.getId() %>" size="30"/><%=user.getId() %></code></p>
+            value="" size="30"/></code></p>
         </td>
     </tr>
    <tr>
@@ -38,7 +38,7 @@
         </td>
         <td width="359">
             <p><code><input type="text" name="pass" 
-            value="<%=user.getPass() %>" size="30"/></code></p>
+            value="" size="30"/></code></p>
         </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@
             <p><code><b>성명</b></code></p>
         </td>
         <td width="359">
-            <p><code><%=user.getName() %></code></p>
+            <p><code></code></p>
         </td>
     </tr>
     <tr>
@@ -55,7 +55,7 @@
         </td>
         <td width="359">
             <p><code><input type="text" name="addr"
-            value="<%=user.getAddr() %>" size="51"/></code></p>
+            value="" size="51"/></code></p>
         </td>
     </tr>
     
@@ -65,7 +65,7 @@
         </td>
         <td width="359">
             <p><textarea name="grade" rows="10" 
-            cols="50"><%=user.getGrade() %></textarea></p>
+            cols="50"></textarea></p>
         </td>
     </tr>
     

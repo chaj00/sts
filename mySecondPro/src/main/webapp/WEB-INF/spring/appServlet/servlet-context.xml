@@ -106,6 +106,9 @@
 	
 	<!--================= 인터셉터등록=================== -->
 	<interceptors>
+		<beans:bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+				<beans:property name="paramName" value="lang"/>
+		</beans:bean>
 		<interceptor>
 			<mapping path="/mybatiscount.do"/>
 			<mapping path="/mybatisinsert.do"/>
@@ -135,6 +138,13 @@
 	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
 	
 	</beans:bean>
+	
+	<!-- ==============파일업로드 설정================= -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="4000000"/>
+		
+	</beans:bean>
+	
 	
 	
 </beans:beans>

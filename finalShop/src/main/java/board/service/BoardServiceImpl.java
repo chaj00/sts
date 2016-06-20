@@ -12,61 +12,36 @@ import board.dto.BoardDTO;
 @Service
 public class BoardServiceImpl implements BoardService{
 	@Autowired
-	@Qualifier("empmybatis")
+	@Qualifier("boarddao")
 	BoardDAO dao;
 
-
 	@Override
-	public int count() {
-		return dao.count();
+	public void insert(BoardDTO board) {
+		dao.insert(board);
 	}
 
 	@Override
-	public void insert(BoardDTO user) {
-		dao.insert(user);
+	public void update(BoardDTO board) {
+		dao.update(board);
 	}
 
 	@Override
-	public void update(BoardDTO user) {
-		dao.update(user);
+	public void delete(String board_no) {
+		dao.delete(board_no);
 	}
 
 	@Override
-	public void delete(String id) {
-		dao.delete(id);
+	public List<BoardDTO> getBoardList() {
+		return dao.getBoardList();
 	}
 
 	@Override
-	public BoardDTO login(String id, String pass) {
-		return null;
+	public BoardDTO read(String board_no) {
+		return dao.read(board_no);
 	}
 
-	@Override
-	public List<BoardDTO> getMemberList() {
-		return dao.getMemberList();
-	}
 
-	@Override
-	public List<BoardDTO> findByAddr(String addr) {
-		return dao.findByAddr(addr);
-	}
 
-	@Override
-	public BoardDTO read(String id) {
-		return dao.read(id);
-	}
-
-	@Override
-	public void txinsert(BoardDTO user) {
-		dao.insert(user);
-		dao.insert(null);
-		
-	}
-
-	@Override
-	public BoardDTO login(BoardDTO user) {
-		return dao.login(user);
-	}
 
 	
 }

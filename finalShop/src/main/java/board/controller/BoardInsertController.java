@@ -12,21 +12,21 @@ import board.dto.BoardDTO;
 import board.service.BoardService;
 
 @Controller
-public class InsertController {
+public class BoardInsertController {
 	@Autowired
 	BoardService service;
 	
 	//get방식으로 요청될때 실행할 메소드 - insert페이지를 response
 	@RequestMapping(value="/board_insert.do", method=RequestMethod.GET)
 	public String showPage(){
-		return "boardinput/form";
+		return "board/input";
 	}
 	//post방식으로 요청될때 실행할 메소드 - 실제 db에 insert를 하기 위한 기능을 수행
 	@RequestMapping(value="/board_insert.do", method=RequestMethod.POST)
 	public ModelAndView runInsert(HttpServletRequest req, BoardDTO user, String id){
 		System.out.println(user+"~~~~~"+id);
 		service.insert(user);
-		return new ModelAndView("redirect:index.do");
+		return new ModelAndView("redirect:board_list.do");
 	}
 	
 }

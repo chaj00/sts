@@ -12,7 +12,7 @@ import board.dto.BoardDTO;
 import board.service.BoardService;
 
 @Controller
-public class ReadController {
+public class BoardReadController {
 	@Autowired
 	BoardService service;
 	
@@ -23,7 +23,7 @@ public class ReadController {
 		
 		mav.addObject("user", service.read(id));
 		
-		mav.setViewName("emp/detail");
+		mav.setViewName("board/detail");
 		
 		return mav;
 	}

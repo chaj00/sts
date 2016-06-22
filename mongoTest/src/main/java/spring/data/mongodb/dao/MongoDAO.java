@@ -1,8 +1,10 @@
 package spring.data.mongodb.dao;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Repository;
 
 import spring.data.mongodb.dto.Score;
@@ -18,4 +20,6 @@ public class MongoDAO {
 		System.out.println(mongolist.size());
 		return mongolist;
 	}
+
+	
 }

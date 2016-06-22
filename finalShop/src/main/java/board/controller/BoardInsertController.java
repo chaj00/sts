@@ -23,9 +23,8 @@ public class BoardInsertController {
 	}
 	//post방식으로 요청될때 실행할 메소드 - 실제 db에 insert를 하기 위한 기능을 수행
 	@RequestMapping(value="/board_insert.do", method=RequestMethod.POST)
-	public ModelAndView runInsert(HttpServletRequest req, BoardDTO user, String id){
-		System.out.println(user+"~~~~~"+id);
-		service.insert(user);
+	public ModelAndView runInsert(HttpServletRequest req, BoardDTO board, String id){
+		service.insert(board);
 		return new ModelAndView("redirect:board_list.do");
 	}
 	

@@ -3,40 +3,14 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
- <mapper namespace="kitri.myemp" >
- 	 	
- 	<select id="count" resultType="int">
- 		select count(*) from myemp
- 	</select>
- 	
- 	<insert id="insert" parameterType="board">
+ <mapper namespace="kitri.finalShop" >
+
+ 	<insert id="board_insert" parameterType="board">
  		insert into tb_board values(seq_no.nextval,#{mem_id},#{title},#{text},0,'0',#{reg_dtm},#{reg_dtm})
  	</insert>
  	
- 	<select id="list" resultType="emp.dto.MyEmpDTO">
- 		select * from myemp
+ 	<select id="board_list" resultType="board">
+ 		select * from tb_board
  	</select>
- 	
- 	<select id="search" parameterType="String" resultType="emp.dto.MyEmpDTO">
- 		select * from myemp where addr like #{addr}
- 	</select>
- 	
- 	<delete id="delete" parameterType="String">
- 		delete from myemp where id= #{id}
- 	</delete>
- 	
- 	<update id="update" parameterType="emp.dto.MyEmpDTO">
- 		update myemp set pass=#{pass}, addr=#{addr}, grade=#{grade} where id=#{id} 
- 	</update>
- 	
- 	<select id="read" resultType="emp.dto.MyEmpDTO">
- 		select * from myemp where id=#{id}
- 	</select>
- 	
- 	<select id="mybatislogin" parameterType="emp" resultType="emp">
- 		select * from myemp where id=#{id} and pass=#{pass}
- 	</select>
- 	
- 	
  
  </mapper>

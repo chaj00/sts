@@ -19,7 +19,7 @@ public class BoardListController{
 	public ModelAndView runList(){
 		ModelAndView mav = new ModelAndView();
 		
-		//mav.addObject("userlist", service.getBoardList());
+		mav.addObject("boardlist", service.getBoardList());
 		
 		mav.setViewName("board/list");
 		

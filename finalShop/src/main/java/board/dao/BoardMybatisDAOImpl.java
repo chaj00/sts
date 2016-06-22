@@ -16,7 +16,7 @@ public class BoardMybatisDAOImpl implements BoardDAO{
 
 	@Override
 	public void insert(BoardDTO board) {
-		// TODO Auto-generated method stub
+		sqlSession.insert("kitri.finalShop.board_insert",board);
 		
 	}
 
@@ -34,8 +34,7 @@ public class BoardMybatisDAOImpl implements BoardDAO{
 
 	@Override
 	public List<BoardDTO> getBoardList() {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList("kitri.finalShop.board_list");
 	}
 
 	@Override

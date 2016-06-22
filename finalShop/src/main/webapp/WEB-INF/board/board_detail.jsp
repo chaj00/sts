@@ -12,34 +12,27 @@
 	<form name="form" method="post" action="read.do">
 		<table width="400" border="1">
 			<tr>
+				<td>글번호</td>
+				<td><input type="text" name="board_no" value="" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<td>제목</td>
+				<td><input type="text" name="title" value=""/></td>
+			</tr>
+			<tr>
 				<td>회원아이디</td>
-				<td><input type="text" name="id" value="" readonly="readonly"/></td>
+				<td><input type="text" name="mem_id" value="" readonly="readonly"/></td>
 			</tr>
+		
 			<tr>
-				<td>회원패스워드</td>
-				<td><input type="text" name="pass" value="" readonly="readonly"/></td>
-			</tr>
-			<tr>
-				<td>회원성명</td>
-				<td><input type="text" name="name" value="" readonly="readonly"/></td>
-			</tr>
-			<tr>
-				<td>회원주소</td>
-				<td><input type="text" name="addr" value="" readonly="readonly"/></td>
-			</tr>
-			<tr>
-				<td>회원부서코드</td>
-				<td><input type="text" name="deptno" value="" readonly="readonly"/></td>
-			</tr>
-			<tr>
-				<td>등급</td>
-				<td><input type="text" name="grade" value="" readonly="readonly"/></td>
+				<td>내용</td>
+				<td><input type="text" name="text" value="" /></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" value="수정하기" />
-					<input type="button" value="삭제하기" onclick="location.href='delete.do?id='"/>
-					<input type="button" value="목록보기" onclick="location.href='list.do'"/>
+					<input type="button" value="삭제하기" onclick="location.href='boad_delete.do?board_no='"/>
+					<input type="button" value="목록보기" onclick="location.href='board_list.do'"/>
 				</td>
 			</tr>
 		</table>

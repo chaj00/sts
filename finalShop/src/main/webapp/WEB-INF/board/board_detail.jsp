@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div align="center">
-	<form name="form" method="post" action="read.do">
+	<form name="form" method="post" action="board_read.do">
 		<table width="400" border="1">
 			<tr>
 				<td>±Û¹øÈ£</td>

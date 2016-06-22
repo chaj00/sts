@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 	<jsp:useBean id="now" class="java.util.Date"/>
-	<fmt:formatDate value="${now}" pattern="yyMMdd hh:mm" var="today" />
+	<fmt:formatDate value="${now}" pattern="yyMMddkkmm" var="today" />
 </head>
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
 <form name="form1" method="post" action="board_insert.do">
@@ -24,7 +24,7 @@
             <hr></td>
     </tr>
     
- 	
+ 	 <p><code><input type="hidden" name="reg_dtm" value="${today}"></code></p>
     <tr>
         <td width="104">
             <p><code><b>제목</b></code></p>

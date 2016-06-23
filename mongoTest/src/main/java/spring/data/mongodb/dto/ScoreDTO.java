@@ -1,8 +1,10 @@
 package spring.data.mongodb.dto;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class Score {
+@Document(collection="score")
+public class ScoreDTO {
 	@Id
 	String _id;
 	String id;
@@ -13,10 +15,11 @@ public class Score {
 	int servlet;
 	int bonus;
 	int spring;
-	public Score(){
+	
+	public ScoreDTO(){
 		
 	}
-	public Score(String _id, String id, String name, String dept, String addr, int java, int servlet, int bonus,
+	public ScoreDTO(String _id, String id, String name, String dept, String addr, int java, int servlet, int bonus,
 			int spring) {
 		super();
 		this._id = _id;

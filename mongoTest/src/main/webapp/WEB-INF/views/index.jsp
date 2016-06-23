@@ -10,7 +10,10 @@
 	<div>
 		<h1>몽고디비 데이터 조회</h1>
 		<hr/>
-		<h3><a href="/mongodb/score/list?pageNo=1">mongodb데이터조회</a></h3>
+		<h3><a href="/mongodb/score/list?pageNo=0">mongodb데이터조회</a></h3>
+		<h3><a href="/mongodb/score/insertform">mongodb document 삽입하기</a></h3>
+		<h3><a href="/mongodb/score/multiinsert">mongodb 여러개 document 삽입하기</a></h3>
+		<h3><a href="/mongodb/score/searchform">검색</a></h3>
 	
 	</div>
 </body>

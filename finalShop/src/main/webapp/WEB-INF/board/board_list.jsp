@@ -24,7 +24,7 @@
 		<c:forEach var="i" begin="0" end="${fn:length(boardlist)}" step="1">
 			<tr>
 				<td>${boardlist[i].board_no}</td>
-				<td>${boardlist[i].title}</td>
+				<td><a href="board_read.do?board_no=${boardlist[i].board_no}">${boardlist[i].title}</a></td>
 				<td>${boardlist[i].mem_id}</td>
 				<td>${boardlist[i].reg_dtm}</td>
 				<td>${boardlist[i].count}</td>

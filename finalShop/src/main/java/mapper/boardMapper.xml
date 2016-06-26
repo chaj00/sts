@@ -9,8 +9,24 @@
  		insert into tb_board values(seq_no.nextval,#{mem_id},#{title},#{text},0,'0',#{reg_dtm},#{reg_dtm})
  	</insert>
  	
+ 	<update id="board_count" parameterType="String">
+ 		update tb_board set count = count+1 where board_no = #{board_no}
+ 	</update>
+ 	
+ 	<update id="board_update" parameterType="board">
+ 		update tb_board set title=#{title}, text=#{text}, mod_dtm=#{mod_dtm} where board_no = #{board_no}
+ 	</update>
+ 	
  	<select id="board_list" resultType="board">
- 		select * from tb_board
+ 		select * from tb_board where del_flg ='0' order by reg_dtm desc
  	</select>
- 
+ 	
+ 	<select id="board_read" parameterType="String" resultType="board">
+ 		select * from tb_board where board_no = #{board_no}
+ 	</select>
+ 	
+ 	<update id="board_delete" parameterType="String">
+ 		update tb_board set del_flg = '1' where board_no =#{board_no}
+ 	</update>
+ 	
  </mapper>

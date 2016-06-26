@@ -13,25 +13,25 @@
 		<table width="400" border="1">
 			<tr>
 				<td>글번호</td>
-				<td><input type="text" name="board_no" value="" readonly="readonly"/></td>
+				<td><input type="hidden" name="board_no" value="${boardlist.board_no}"/>${boardlist.board_no}</td>
 			</tr>
 			<tr>
 				<td>제목</td>
-				<td><input type="text" name="title" value=""/></td>
+				<td>${boardlist.title}</td>
 			</tr>
 			<tr>
 				<td>회원아이디</td>
-				<td><input type="text" name="mem_id" value="" readonly="readonly"/></td>
+				<td>${boardlist.mem_id }</td>
 			</tr>
 		
 			<tr>
 				<td>내용</td>
-				<td><input type="text" name="text" value="" /></td>
+				<td>${boardlist.text }</td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" value="수정하기" />
-					<input type="button" value="삭제하기" onclick="location.href='boad_delete.do?board_no='"/>
+					<input type="button" value="삭제하기" onclick="location.href='board_delete.do?board_no=${boardlist.board_no}'"/>
 					<input type="button" value="목록보기" onclick="location.href='board_list.do'"/>
 				</td>
 			</tr>

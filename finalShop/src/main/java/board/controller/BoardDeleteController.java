@@ -16,8 +16,8 @@ public class BoardDeleteController {
 	BoardService service;
 	
 	@RequestMapping(value="/board_delete.do", method=RequestMethod.GET)
-	public ModelAndView runDelete(HttpServletRequest req, String id){
-		service.delete(id);
+	public ModelAndView runDelete(HttpServletRequest req, String board_no){
+		service.delete(board_no);
 		return new ModelAndView("redirect:board_list.do");
 	}
 	

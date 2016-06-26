@@ -17,13 +17,8 @@ public class BoardListController{
 
 	@RequestMapping(value="/board_list.do", method=RequestMethod.GET)
 	public ModelAndView runList(){
-		ModelAndView mav = new ModelAndView();
 		
-		mav.addObject("boardlist", service.getBoardList());
-		
-		mav.setViewName("board/list");
-		
-		return mav;
+		return new ModelAndView("board/list","boardlist", service.getBoardList());
 	}
 
 

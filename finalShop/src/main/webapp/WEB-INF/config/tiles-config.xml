@@ -37,6 +37,12 @@
 	<definition name="board/input" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/board/board_input.jsp"/>
 	</definition>
+	<definition name="board/detail" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/board_detail.jsp"/>
+	</definition>
+	<definition name="board/update" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/board_update.jsp"/>
+	</definition>
 	
-	
+		
 </tiles-definitions>

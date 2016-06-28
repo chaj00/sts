@@ -16,10 +16,9 @@ public class BoardUpdateController {
 	@Autowired
 	BoardService service;
 	
-	@RequestMapping(value="/update.do", method=RequestMethod.POST)
-	public ModelAndView runUdate(HttpServletRequest req, BoardDTO user){
-		System.out.println("update"+user);
-		service.update(user);
-		return new ModelAndView("redirect:board_list.do");
+	@RequestMapping(value="/board_update.do", method=RequestMethod.POST)
+	public ModelAndView runUdate(HttpServletRequest req, BoardDTO board){
+		service.update(board);
+		return new ModelAndView("redirect:board_read.do?board_no="+board.getBoard_no());
 	}
 }

@@ -22,14 +22,12 @@ public class BoardMybatisDAOImpl implements BoardDAO{
 
 	@Override
 	public void update(BoardDTO board) {
-		// TODO Auto-generated method stub
-		
+		sqlSession.update("kitri.finalShop.board_update",board);
 	}
 
 	@Override
 	public void delete(String board_no) {
-		// TODO Auto-generated method stub
-		
+		sqlSession.delete("kitri.finalShop.board_delete",board_no);
 	}
 
 	@Override
@@ -39,8 +37,12 @@ public class BoardMybatisDAOImpl implements BoardDAO{
 
 	@Override
 	public BoardDTO read(String board_no) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne("kitri.finalShop.board_read", board_no);
+	}
+
+	@Override
+	public void count_update(String board_no) {
+		sqlSession.update("kitri.finalShop.board_count", board_no);
 	}
 	
 

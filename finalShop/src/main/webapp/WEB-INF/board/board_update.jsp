@@ -1,6 +1,7 @@
 <%@page import="board.dto.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=euc-kr">
@@ -10,14 +11,19 @@
 </head>
 
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
-<form name="form1" method="post" 
-					action="board_update.do">
+<form name="form1" method="post" action="board_update.do">
+
+	<jsp:useBean id="now" class="java.util.Date"/>
+	<fmt:formatDate value="${now}" pattern="yyMMddkkmm" var="today" />
+	
 <table align="center" cellpadding="0" cellspacing="0" width="479">
     <tr>
         <td width="469" colspan="2" height="42">
             <p align="center"><code><b><span style="font-size:20pt;">게시물수정</span></b></code></p>
         </td>
     </tr>
+    
+    <p><code><input type="hidden" name="mod_dtm" value="${today}"/></code></p>
     <tr>
         <td width="479" colspan="2">
             <hr></td>
@@ -25,47 +31,35 @@
  
     <tr>
         <td width="104">
+            <p><code><b>글번호</b></code></p>
+        </td>
+        <td width="359">
+            <p><code><input type="hidden" name="board_no" value="${boardlist.board_no }" size="30"/>${boardlist.board_no }</code></p>
+        </td>
+    </tr>
+    <tr>
+        <td width="104">
             <p><code><b>아이디</b></code></p>
         </td>
         <td width="359">
-            <p><code><input type="hidden" name="id" 
-            value="" size="30"/></code></p>
+            <p><code>${boardlist.mem_id }</code></p>
         </td>
     </tr>
    <tr>
         <td width="104">
-            <p><code><b>비밀번호</b></code></p>
+            <p><code><b>제목</b></code></p>
         </td>
         <td width="359">
-            <p><code><input type="text" name="pass" 
-            value="" size="30"/></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="104">
-            <p><code><b>성명</b></code></p>
-        </td>
-        <td width="359">
-            <p><code></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="104">
-            <p><code><b>주소</b></code></p>
-        </td>
-        <td width="359">
-            <p><code><input type="text" name="addr"
-            value="" size="51"/></code></p>
+            <p><code><input type="text" name="title"  value="${boardlist.title }" size="30"/></code></p>
         </td>
     </tr>
     
     <tr>
         <td width="104">
-            <p><code><b>등급</b></code></p>
+            <p><code><b>내용</b></code></p>
         </td>
         <td width="359">
-            <p><textarea name="grade" rows="10" 
-            cols="50"></textarea></p>
+            <p><code><textarea name="text" rows="10" cols="50">${boardlist.text }</textarea></code></p>
         </td>
     </tr>
     
@@ -76,15 +70,6 @@
     <tr>
         <td width="479" colspan="2">
             <p align="center"><input type="submit" name="formbutton1" value="수정"></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="479" colspan="2" height="9" valign="bottom">            
-                <p><code><a href="">리스트(L)</a></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="479" colspan="2" height="57" valign="bottom">            <p align="right"><code><input type="hidden" name="jumin"><input type="hidden" name="ilsi"></code></p>
         </td>
     </tr>
 </table>

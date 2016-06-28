@@ -17,26 +17,15 @@ public class BoardReadController {
 	BoardService service;
 	
 
-	@RequestMapping(value="/read.do", method=RequestMethod.GET)
-	public ModelAndView runRead(HttpServletRequest req, BoardDTO user, String id){
-		ModelAndView mav = new ModelAndView();
-		
-		mav.addObject("user", service.read(id));
-		
-		mav.setViewName("board/detail");
-		
-		return mav;
+	@RequestMapping(value="/board_read.do", method=RequestMethod.GET)
+	public ModelAndView runRead(HttpServletRequest req, String board_no){
+		service.count_update(board_no);
+		return new ModelAndView("board/detail","boardlist", service.read(board_no));
 	}
 	
-	@RequestMapping(value="/read.do", method=RequestMethod.POST)
-	public ModelAndView runUdateRead(HttpServletRequest req, BoardDTO user){
-		ModelAndView mav = new ModelAndView();
-		
-		mav.addObject("user", user);
-		
-		mav.setViewName("emp/update");
-		
-		return mav;
+	@RequestMapping(value="/board_read.do", method=RequestMethod.POST)
+	public ModelAndView runUdateRead(HttpServletRequest req, String board_no){
+		return new ModelAndView("board/update","boardlist", service.read(board_no));
 	}
 
 }

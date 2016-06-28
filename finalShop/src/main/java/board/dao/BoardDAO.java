@@ -10,6 +10,7 @@ public interface BoardDAO {
 	void delete(String board_no);
 	List<BoardDTO> getBoardList();
 	BoardDTO read(String board_no);
+	void count_update(String board_no);
 	
 }
 

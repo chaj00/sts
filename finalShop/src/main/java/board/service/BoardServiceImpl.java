@@ -40,6 +40,11 @@ public class BoardServiceImpl implements BoardService{
 		return dao.read(board_no);
 	}
 
+	@Override
+	public void count_update(String board_no) {
+		dao.count_update(board_no);	
+	}
+
 
 
 
